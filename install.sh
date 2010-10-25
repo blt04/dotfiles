@@ -31,7 +31,7 @@ for f in `ls`; do
         if [[ ${ans} != 'y' && ${ans} != 'Y' ]]; then
             continue;
         fi
-        rm "$HOMEDIR/.$f"
+        rm -rf "$HOMEDIR/.$f"
     fi
 
     #echo "Linking $HOMEDIR/.$f to $DOTFILES/.$f"
