@@ -1,0 +1,11 @@
+[user]
+	name = Brandon Turner
+	email = bturner@bltweb.net
+[color]
+	diff = auto
+	status = auto
+    branch = auto
+[core]
+    excludesfile = /home/bturner/.gitignore
+[log]
+    date = local
