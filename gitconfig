@@ -6,6 +6,6 @@
 	status = auto
     branch = auto
 [core]
-    excludesfile = /home/bturner/.gitignore
+    excludesfile = ~/.gitignore
 [log]
     date = local
