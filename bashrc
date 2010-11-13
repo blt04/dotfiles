@@ -49,8 +49,19 @@ if [[ -n "$PS1" ]]; then
         fi
     fi
 
+    # Add __git_ps1 function if it doesn't exist
+    if ! type __git_ps1 2>&1 &>/dev/null; then
+        if [ -e "$HOME/.dotfiles/git-ps1.bash" ]; then
+            source "$HOME/.dotfiles/git-ps1.bash"
+        fi
+    fi
+
     if [ "$color_prompt" = yes ]; then
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(__git_ps1 " (%s)")\[\033[00m\]\$ '
+        if type __git_ps1 2>&1 &>/dev/null; then
+            PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(__git_ps1 " (%s)")\[\033[00m\]\$ '
+        else
+            PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+        fi
     else
         PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
     fi

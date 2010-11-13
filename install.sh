@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOTFILES=".dotfiles"
-IGNORE=( $(basename $0) . .. .git .gitignore README.markdown )
+IGNORE=( $(basename $0) . .. .git .gitignore README.markdown git-completion.bash )
 
 HOMEDIR=`cd ~; pwd`
 
