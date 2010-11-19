@@ -6,6 +6,7 @@ set incsearch
 set background=dark
 filetype on
 filetype indent on
+filetype plugin indent on
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -17,6 +18,7 @@ set bs=2
 set mouse=a
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+command -bar -nargs=1 OpenURL :!sensible-browser <args>
 
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
