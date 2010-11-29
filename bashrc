@@ -92,7 +92,9 @@ if [[ -n "$PS1" ]]; then
     alias ll='ls -lF'
     alias la='ls -lAF'
     alias l='ls -CF'
-    alias ack='ack-grep'
+    if [ -x /usr/bin/ack-grep ]; then
+        alias ack='ack-grep'
+    fi
 
     # Alias definitions.
     # You may want to put all your additions into a separate file like
