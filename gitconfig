@@ -9,3 +9,5 @@
     excludesfile = ~/.gitignore
 [log]
     date = local
+[github]
+	user = blt04
