@@ -118,4 +118,9 @@ if [[ -n "$PS1" ]]; then
 
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+# Load user or system RVM if it exists
+if [[ -s "/usr/local/lib/rvm" ]]; then
+    source "/usr/local/lib/rvm"
+elif [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+    source "$HOME/.rvm/scripts/rvm"
+fi
