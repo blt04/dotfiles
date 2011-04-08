@@ -16,9 +16,17 @@ set history=50
 set nocompatible
 set bs=2
 set mouse=a
+set ignorecase
+set smartcase
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 command -bar -nargs=1 OpenURL :!sensible-browser <args>
+
+
+" Jump to the last position when reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
