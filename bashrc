@@ -72,6 +72,9 @@ if [[ -n "$PS1" ]]; then
     xterm*|rxvt*)
         PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
         ;;
+    screen*)
+        PS1="\[\033k\u@\h:\w\033\134\]$PS1"
+        ;;
     *)
         ;;
     esac
