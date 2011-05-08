@@ -122,8 +122,8 @@ if [[ -n "$PS1" ]]; then
 fi
 
 # Load user or system RVM if it exists
-if [[ -s "/usr/local/lib/rvm" ]]; then
-    source "/usr/local/lib/rvm"
-elif [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
     source "$HOME/.rvm/scripts/rvm"
+elif [[ -s "/usr/local/rvm/scripts/rvm" ]]; then
+    source "/usr/local/rvm/scripts/rvm"
 fi
