@@ -1,9 +1,10 @@
 startup_message off
 vbell off
 escape ``
-shell -${SHELL}
+#shell -${SHELL}
 #shelltitle "$ |bash"
-hardstatus alwayslastline "%{= }%-Lw%{BW}%50>%n%f* %t%{-}%+Lw%<"
+hardstatus alwayslastline "%{=kw}%-Lw%{Wb}%50>%n%f* %t%{-}%+Lw%<"
+termcapinfo linux|xterm|rxvt|xterm-color ti@:te@:XT
 
 # Start with window 1
 bind c screen 1
