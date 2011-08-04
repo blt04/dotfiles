@@ -118,6 +118,7 @@ if [[ -n "$PS1" ]]; then
     export DEBFULLNAME='Brandon Turner'
     export DEBEMAIL='bturner@bltweb.net'
     export EDITOR=/usr/bin/vim
+    export GIT_PS1_SHOWUPSTREAM="verbose"
 
 fi
 
