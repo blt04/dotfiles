@@ -124,11 +124,10 @@ if [[ -n "$PS1" ]]; then
     export EDITOR=/usr/bin/vim
     export GIT_PS1_SHOWUPSTREAM="verbose"
 
-fi
-
-# Load user or system RVM if it exists
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-    source "$HOME/.rvm/scripts/rvm"
-elif [[ -s "/usr/local/rvm/scripts/rvm" ]]; then
-    source "/usr/local/rvm/scripts/rvm"
+    # Load user or system RVM if it exists
+    if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+        source "$HOME/.rvm/scripts/rvm"
+    elif [[ -s "/usr/local/rvm/scripts/rvm" ]]; then
+        source "/usr/local/rvm/scripts/rvm"
+    fi
 fi
