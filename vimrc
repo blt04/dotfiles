@@ -8,8 +8,8 @@ filetype on
 filetype indent on
 filetype plugin indent on
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set ruler
 set viminfo='20,\"50
 set history=50
