@@ -2,3 +2,5 @@
 --type-set=markdown=.markdown
 --type-set=twig=.twig
 --type-set=sass=.sass,.scss
+--type-set=coffeescript=.coffee
+--type-set=handlebars=.handlebars
