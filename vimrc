@@ -1,5 +1,4 @@
 call pathogen#infect()
-hi Normal guibg=black guifg=lightgray
 set ruler
 syntax on
 set hlsearch

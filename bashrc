@@ -121,7 +121,7 @@ if [[ -n "$PS1" ]]; then
 
     export DEBFULLNAME='Brandon Turner'
     export DEBEMAIL='bturner@bltweb.net'
-    export EDITOR=/usr/bin/vim
+    export EDITOR=`which vim`
     export GIT_PS1_SHOWUPSTREAM="verbose"
 
     # Load user or system RVM if it exists
