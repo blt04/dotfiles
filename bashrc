@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 if [[ -n "$PS1" ]]; then
 
+    PLATFORM=`uname`
+
     # don't put duplicate lines in the history. See bash(1) for more options
     # ... or force ignoredups and ignorespace
     HISTCONTROL=ignoredups:ignorespace
@@ -84,6 +86,10 @@ if [[ -n "$PS1" ]]; then
     esac
 
     # enable color support of ls and also add handy aliases
+    if [ "$PLATFORM" == "Darwin" ]; then
+      export CLICOLOR=1
+      export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+    fi
     if [ -x /usr/bin/dircolors ]; then
         test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
         alias ls='ls --color=auto'
