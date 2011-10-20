@@ -108,6 +108,9 @@ if [[ -n "$PS1" ]]; then
     if [ -x /usr/bin/ack-grep ]; then
         alias ack='ack-grep'
     fi
+    if [ ! `which md5sum` ]  && [ -x /sbin/md5 ]; then
+        alias md5sum='md5 -r'
+    fi
 
     # Alias definitions.
     # You may want to put all your additions into a separate file like
