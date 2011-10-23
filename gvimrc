@@ -9,6 +9,9 @@ set guioptions-=T
 set guioptions-=r
 set guioptions-=L
 
+" Disable audible bell
+set vb
+
 if has("gui_macvim")
   set guifont=Monaco:h10.00
 elseif has("gui_gtk2")
