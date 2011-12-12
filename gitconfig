@@ -4,10 +4,12 @@
 [color]
 	diff = auto
 	status = auto
-    branch = auto
+  branch = auto
 [core]
-    excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
+[fetch]
+  submodule = on-demand
 [log]
-    date = local
+  date = local
 [github]
 	user = blt04
