@@ -1,23 +1,33 @@
+" Enable plugins
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
-set ruler
+
+" Look and Feel
+set nocompatible
 syntax on
-set hlsearch
-set incsearch
+set ruler
 set background=dark
+set viminfo='20,\"50
+set mouse=a
+set showcmd
 filetype on
 filetype indent on
 filetype plugin indent on
+
+" Whitespace
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set ruler
-set viminfo='20,\"50
 set history=50
-set nocompatible
 set bs=2
-set mouse=a
+
+" Searching
+set hlsearch
+set incsearch
 set ignorecase
 set smartcase
+
+" Other
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 command -bar -nargs=1 OpenURL :!sensible-browser <args>
