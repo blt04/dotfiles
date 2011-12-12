@@ -1,6 +1,7 @@
 set t_Co=256
 colorscheme default
 set background=dark
+set noanti
 hi Normal guibg=black guifg=lightgray
 
 " Don't show the toolbar
