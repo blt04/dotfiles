@@ -45,3 +45,6 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" Use ESC or Control+C to leave the Command-T plugin
+let g:CommandTCancelMap=['<ESC>','<C-c>']
