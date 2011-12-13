@@ -22,3 +22,6 @@
 [submodule "vim/bundle/puppet-vim"]
 	path = vim/bundle/puppet-vim
 	url = git://github.com/ajf/puppet-vim.git
+[submodule "vim/bundle/command-t"]
+	path = vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
