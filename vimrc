@@ -48,3 +48,5 @@ autocmd BufWinLeave * call clearmatches()
 
 " Use ESC or Control+C to leave the Command-T plugin
 let g:CommandTCancelMap=['<ESC>','<C-c>']
+let g:CommandTSelectPrevMap=['<Up>', '<C-p>', '<C-k>', '<Esc>OA']
+let g:CommandTSelectNextMap=['<Down>', '<C-n>', '<C-j>', '<Esc>OB']
