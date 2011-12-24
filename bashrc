@@ -85,6 +85,9 @@ if [[ -n "$PS1" ]]; then
         ;;
     esac
 
+    # Disable CTRL+S terminal flow control
+    stty stop undef
+
     # enable color support of ls and also add handy aliases
     if [ "$PLATFORM" == "Darwin" ]; then
       export CLICOLOR=1
