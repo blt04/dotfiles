@@ -1,8 +1,8 @@
 set t_Co=256
-colorscheme default
+colorscheme moria
 set background=dark
-set noanti
-hi Normal guibg=black guifg=lightgray
+set anti
+highlight ExtraWhitespace guibg=red
 
 " Don't show the toolbar
 set guioptions-=T
@@ -14,7 +14,8 @@ set guioptions-=L
 set vb
 
 if has("gui_macvim")
-  set guifont=Monaco:h10.00
+  set guifont=Monaco:h11.00
+  "set guifont=Consolas:h13.00
   macmenu &File.New\ Tab key=<nop>
   map <D-t> :CommandT<CR>
 elseif has("gui_gtk2")
