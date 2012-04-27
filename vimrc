@@ -50,3 +50,9 @@ autocmd BufWinLeave * call clearmatches()
 let g:CommandTCancelMap=['<ESC>','<C-c>']
 let g:CommandTSelectPrevMap=['<Up>', '<C-p>', '<C-k>', '<Esc>OA']
 let g:CommandTSelectNextMap=['<Down>', '<C-n>', '<C-j>', '<Esc>OB']
+
+" Source a local vimrc
+let vimrc_local=glob('~/.vimrc-local')
+if filereadable(vimrc_local)
+  exec ":source " . vimrc_local
+endif
