@@ -11,5 +11,6 @@
   submodule = on-demand
 [log]
   date = local
+  decorate
 [github]
 	user = blt04
