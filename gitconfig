@@ -15,4 +15,4 @@
 [github]
 	user = blt04
 [push]
-	default = simple
+	default = upstream
