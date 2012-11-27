@@ -136,6 +136,10 @@ if [[ -n "$PS1" ]]; then
     export EDITOR=`which vim`
     export GIT_PS1_SHOWUPSTREAM="verbose"
 
+    if [ -f ~/.bashrc-local ]; then
+      . ~/.bashrc-local
+    fi
+
     # Load user or system RVM if it exists
     if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
         source "$HOME/.rvm/scripts/rvm"
