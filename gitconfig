@@ -1,9 +1,9 @@
 [user]
-	name = Brandon Turner
-	email = bt@brandonturner.net
+  name = Brandon Turner
+  email = bt@brandonturner.net
 [color]
-	diff = auto
-	status = auto
+  diff = auto
+  status = auto
   branch = auto
 [core]
   excludesfile = ~/.gitignore
@@ -13,6 +13,6 @@
   date = local
   decorate
 [github]
-	user = blt04
+  user = blt04
 [push]
-	default = upstream
+  default = upstream
