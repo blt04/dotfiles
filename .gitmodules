@@ -22,9 +22,9 @@
 [submodule "vim/bundle/puppet-vim"]
 	path = vim/bundle/puppet-vim
 	url = git://github.com/ajf/puppet-vim.git
-[submodule "vim/bundle/command-t"]
-	path = vim/bundle/command-t
-	url = git://git.wincent.com/command-t.git
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = git@github.com:kien/ctrlp.vim.git

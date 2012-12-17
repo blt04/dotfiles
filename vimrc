@@ -46,10 +46,8 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-" Use ESC or Control+C to leave the Command-T plugin
-let g:CommandTCancelMap=['<ESC>','<C-c>']
-let g:CommandTSelectPrevMap=['<Up>', '<C-p>', '<C-k>', '<Esc>OA']
-let g:CommandTSelectNextMap=['<Down>', '<C-n>', '<C-j>', '<Esc>OB']
+" Use \t as an alternate map for Ctrl+P
+nmap \t <C-p>
 
 " Source a local vimrc
 let vimrc_local=glob('~/.vimrc-local')
