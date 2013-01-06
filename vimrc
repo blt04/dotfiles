@@ -47,7 +47,9 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 " Use \t as an alternate map for Ctrl+P
-nmap \t <C-p>
+nmap \t :CtrlP<CR>
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_max_height = 30
 
 " Source a local vimrc
 let vimrc_local=glob('~/.vimrc-local')
