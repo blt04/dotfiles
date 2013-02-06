@@ -140,6 +140,7 @@ if [[ -n "$PS1" ]]; then
       . ~/.bashrc-local
     fi
 
+    export rvmsudo_secure_path=1
     # Load user or system RVM if it exists
     if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
         source "$HOME/.rvm/scripts/rvm"
