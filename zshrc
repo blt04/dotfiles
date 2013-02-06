@@ -41,6 +41,12 @@ PROMPT='%{$fg[$NCOLOR]%}%B%n${SSH_TTY:+@%m}%b%{$reset_color%}:%{$fg[blue]%}%B%3~
 unset RPROMPT
 
 # Other customizations
+LESS='--RAW-CONTROL-CHARS --no-init --quit-if-one-screen --ignore-case --line-numbers'
+
+# PageUp
+bindkey '^[[5~' history-beginning-search-backward
+# PageDown
+bindkey '^[[6~' history-beginning-search-forward
 
 alias ack='ack-grep'
 if [ ! `which md5sum` ]  && [ -x /sbin/md5 ]; then alias md5sum='md5 -r'; fi
