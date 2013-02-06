@@ -32,11 +32,15 @@ plugins=(gitfast rvm)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-
+# My theme modifications
 GIT_PS1_SHOWUPSTREAM="verbose"
-PROMPT='%{$fg[$NCOLOR]%}%B%n${SSH_TTY:+@%m}%b%{$reset_color%}:%{$fg[blue]%}%B%3~%b%{$reset_color%} $(git_prompt_info)%(!.#.$) '
+ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg_bold[blue]%}(%{$fg_no_bold[yellow]%}%B"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%b%{$fg_bold[blue]%})%{$reset_color%}"
+if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
+PROMPT='%{$fg[$NCOLOR]%}%B%n${SSH_TTY:+@%m}%b%{$reset_color%}:%{$fg[blue]%}%B%3~%b%{$reset_color%}$(git_prompt_info)%(!.#.$) '
 unset RPROMPT
+
+# Other customizations
 
 alias ack='ack-grep'
 if [ ! `which md5sum` ]  && [ -x /sbin/md5 ]; then alias md5sum='md5 -r'; fi
