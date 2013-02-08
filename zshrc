@@ -41,6 +41,7 @@ PROMPT='%{$fg[$NCOLOR]%}%B%n${SSH_TTY:+@%m}%b%{$reset_color%}:%{$fg[blue]%}%B%3~
 unset RPROMPT
 
 # Other customizations
+unsetopt correct_all
 LESS='--RAW-CONTROL-CHARS --no-init --quit-if-one-screen --ignore-case --line-numbers'
 
 # PageUp
@@ -49,6 +50,7 @@ bindkey '^[[5~' history-beginning-search-backward
 bindkey '^[[6~' history-beginning-search-forward
 
 alias ack='ack-grep'
+alias dv='dirs -v'
 if [ ! `which md5sum` ]  && [ -x /sbin/md5 ]; then alias md5sum='md5 -r'; fi
 
 if [ -f ~/.zshrc-local ]; then
