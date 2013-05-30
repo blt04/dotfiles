@@ -4,3 +4,4 @@
 --type-set=sass=.sass,.scss
 --type-set=coffeescript=.coffee
 --type-set=handlebars=.handlebars
+--type-set=cucumber=.feature
