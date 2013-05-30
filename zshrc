@@ -68,3 +68,5 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
 elif [[ -s "/usr/local/rvm/scripts/rvm" ]]; then
     source "/usr/local/rvm/scripts/rvm"
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
