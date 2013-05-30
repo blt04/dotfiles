@@ -49,13 +49,17 @@ bindkey '^[[5~' history-beginning-search-backward
 # PageDown
 bindkey '^[[6~' history-beginning-search-forward
 
-alias ack='ack-grep'
+if [ -x /usr/bin/ack-grep ]; then
+  alias ack='ack-grep'
+fi
 alias dv='dirs -v'
-if [ ! `which md5sum` ]  && [ -x /sbin/md5 ]; then alias md5sum='md5 -r'; fi
+if ! which md5sum > /dev/null && [ -x /sbin/md5 ]; then alias md5sum='md5 -r'; fi
 
 if [ -f ~/.zshrc-local ]; then
   . ~/.zshrc-local
 fi
+
+export EDITOR=`which vim`
 
 # Load user or system RVM if it exists
 export rvmsudo_secure_path=1
