@@ -7,5 +7,5 @@ The home directory config files I use.
 Installation
 ------------
 
-    $ git clone git://github.com/blt04/dotfiles.git ~/.dotfiles
+    $ git clone --recursive git://github.com/blt04/dotfiles.git ~/.dotfiles
     $ ~/.dotfiles/install.sh
