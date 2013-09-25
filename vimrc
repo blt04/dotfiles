@@ -53,6 +53,10 @@ let g:ctrlp_max_height = 30
 let g:ctrlp_max_files = 50000
 let g:ctrlp_custom_ignore = '\v[\/](pkg|bundles)$'
 
+" Use \n for :NERDTree and \m for :NERDTreeMirror
+nmap \n :NERDTreeToggle<CR>
+nmap \m :NERDTreeMirror<CR>
+
 " Source a local vimrc
 let vimrc_local=glob('~/.vimrc-local')
 if filereadable(vimrc_local)
