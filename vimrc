@@ -50,6 +50,8 @@ autocmd BufWinLeave * call clearmatches()
 nmap \t :CtrlP<CR>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_height = 30
+let g:ctrlp_max_files = 50000
+let g:ctrlp_custom_ignore = '\v[\/](pkg|bundles)$'
 
 " Source a local vimrc
 let vimrc_local=glob('~/.vimrc-local')
