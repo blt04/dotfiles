@@ -15,7 +15,7 @@
 [github]
   user = blt04
 [push]
-  default = upstream
+  default = simple
 [merge]
   defaultToUpstream = true
 [alias]
