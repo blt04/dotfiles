@@ -56,6 +56,12 @@ alias dv='dirs -v'
 if ! which md5sum > /dev/null && [ -x /sbin/md5 ]; then alias md5sum='md5 -r'; fi
 if ! which sha256sum > /dev/null && [ -x /usr/bin/shasum ]; then alias sha256sum='shasum -a 256'; fi
 
+# Connect forwarded ssh agent in tmux
+# See also ~/.ssh/rc
+if [[ -n "$TMUX" ]] && [ -e ~/.ssh/ssh_auth_sock ]; then
+  export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+fi
+
 if [ -f ~/.zshrc-local ]; then
   . ~/.zshrc-local
 fi

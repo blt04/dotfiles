@@ -136,6 +136,12 @@ if [[ -n "$PS1" ]]; then
     export EDITOR=`which vim`
     export GIT_PS1_SHOWUPSTREAM="verbose"
 
+    # Connect forwarded ssh agent in tmux
+    # See also ~/.ssh/rc
+    if [[ -n "$TMUX" ]] && [ -e ~/.ssh/ssh_auth_sock ]; then
+      export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+    fi
+
     if [ -f ~/.bashrc-local ]; then
       . ~/.bashrc-local
     fi
