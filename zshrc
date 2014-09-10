@@ -32,12 +32,20 @@ plugins=(gitfast rvm)
 
 source $ZSH/oh-my-zsh.sh
 
+# Allow ignoring the git prompt on certain large git repos.
+# Set: git config prompt.hide true
+# See https://github.com/robbyrussell/oh-my-zsh/issues/357#issuecomment-1741169
+function _gitprompt {
+  [ "$(git config prompt.hide)" = "true" ] && return
+  echo "$(git_prompt_info)" # or whatever you use to display the git prompt
+}
+
 # My theme modifications
 GIT_PS1_SHOWUPSTREAM="verbose"
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg_bold[blue]%}(%{$fg_no_bold[yellow]%}%B"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%b%{$fg_bold[blue]%})%{$reset_color%}"
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
-PROMPT='%{$fg[$NCOLOR]%}%B%n${SSH_TTY:+@%m}%b%{$reset_color%}:%{$fg[blue]%}%B%3~%b%{$reset_color%}$(git_prompt_info)%(!.#.$) '
+PROMPT='%{$fg[$NCOLOR]%}%B%n${SSH_TTY:+@%m}%b%{$reset_color%}:%{$fg[blue]%}%B%3~%b%{$reset_color%}$(_gitprompt)%(!.#.$) '
 unset RPROMPT
 
 # Other customizations
