@@ -28,9 +28,18 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gitfast rvm)
+plugins=(git rvm)
 
 source $ZSH/oh-my-zsh.sh
+
+# Don't use the gitfast plugin, because it uses its own git-completion.bash
+# and we want to use the system one installed with git.
+# But we do like their prompts, so include that here.
+source $ZSH/plugins/gitfast/git-prompt.sh
+function git_prompt_info() {
+  dirty="$(parse_git_dirty)"
+  __git_ps1 "${ZSH_THEME_GIT_PROMPT_PREFIX//\%/%%}%s${dirty//\%/%%}${ZSH_THEME_GIT_PROMPT_SUFFIX//\%/%%}"
+}
 
 # Allow ignoring the git prompt on certain large git repos.
 # Set: git config prompt.hide true
