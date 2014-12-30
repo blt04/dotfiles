@@ -59,6 +59,7 @@ unset RPROMPT
 
 # Other customizations
 unsetopt correct_all
+unsetopt auto_name_dirs
 LESS='--RAW-CONTROL-CHARS --no-init --quit-if-one-screen --ignore-case --line-numbers'
 
 # PageUp
