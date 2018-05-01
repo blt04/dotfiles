@@ -5,3 +5,4 @@
 --type-set=coffeescript=.coffee
 --type-set=handlebars=.handlebars
 --type-set=cucumber=.feature
+--ignore-dir=.terraform
