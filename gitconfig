@@ -23,3 +23,5 @@
   cherrylog = log --cherry-pick --right-only --no-merges --pretty='format:%C(yellow)%h%Creset %ad %Cgreen%an%Creset%x09%m %s'
   graph = log --graph --oneline
   sn = log -1 --pretty=format:%h
+[url "https://"]
+	insteadOf = git://
