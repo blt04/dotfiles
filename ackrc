@@ -6,3 +6,6 @@
 --type-set=handlebars=.handlebars
 --type-set=cucumber=.feature
 --ignore-dir=.terraform
+--ignore-dir=dist/
+--ignore-dir=.angular/
+--ignore-dir=node_modules/

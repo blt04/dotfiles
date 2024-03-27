@@ -61,6 +61,7 @@ unset RPROMPT
 unsetopt correct_all
 unsetopt auto_name_dirs
 LESS='--RAW-CONTROL-CHARS --no-init --quit-if-one-screen --ignore-case --line-numbers'
+HISTFILE=${HOME}/.zsh_history
 
 # PageUp
 bindkey '^[[5~' history-beginning-search-backward
@@ -94,4 +95,4 @@ elif [[ -s "/usr/local/rvm/scripts/rvm" ]]; then
     source "/usr/local/rvm/scripts/rvm"
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=/opt/homebrew/bin:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

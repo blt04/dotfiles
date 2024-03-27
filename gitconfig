@@ -9,6 +9,7 @@
   excludesfile = ~/.gitignore
 [fetch]
   submodule = on-demand
+  prune = true
 [log]
   date = local
   decorate
@@ -25,3 +26,9 @@
   sn = log -1 --pretty=format:%h
 [url "https://"]
 	insteadOf = git://
+[gpg "x509"]
+  program = smimesign
+[gpg]
+  format = x509
+[commit]
+  gpgsign = true
