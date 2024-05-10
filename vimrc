@@ -57,6 +57,29 @@ let g:ctrlp_custom_ignore = '\v[\/](pkg|bundles|dist|node_modules)$'
 nmap \n :NERDTreeToggle<CR>
 nmap \m :NERDTreeMirror<CR>
 
+" use <tab> to trigger completion and navigate to the next complete item
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+
+" make <cr> select the first completion item and confirm the completion when no item has been selected:
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gdd :call CocAction('jumpDefinition')<CR>
+nmap <silent> gds :call CocAction('jumpDefinition', 'split')<CR>
+nmap <silent> gdv :call CocAction('jumpDefinition', 'vsplit')<CR>
+nmap <silent> gdt :call CocAction('jumpDefinition', 'tabe')<CR>
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 " Source a local vimrc
 let vimrc_local=glob('~/.vimrc-local')
 if filereadable(vimrc_local)
