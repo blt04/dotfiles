@@ -81,11 +81,16 @@ if [[ -n "$TMUX" ]] && [ -e ~/.ssh/ssh_auth_sock ]; then
   export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 fi
 
+if [ -f ~/.iterm2_shell_integration.zsh ]; then
+  source ~/.iterm2_shell_integration.zsh
+fi
+
 if [ -f ~/.zshrc-local ]; then
   . ~/.zshrc-local
 fi
 
 export EDITOR=`which vim`
+export GPG_TTY=$(tty)
 
 # Load user or system RVM if it exists
 export rvmsudo_secure_path=1
