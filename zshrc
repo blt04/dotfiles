@@ -28,7 +28,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,4 +95,8 @@ elif [[ -s "/usr/local/rvm/scripts/rvm" ]]; then
     source "/usr/local/rvm/scripts/rvm"
 fi
 
-PATH=/opt/homebrew/bin:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
+if [[ -e "$HOME/.rvm/bin" ]]; then
+    PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+fi
