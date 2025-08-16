@@ -1,0 +1,13 @@
+copy-on-select = clipboard
+theme = Dracula
+background = #0A0A0A
+#bold-is-bright = true
+#font-family = "Monaco"
+font-size = 12
+font-feature = -calt, -liga, -dlig
+adjust-cell-width = -7%
+font-thicken = true
+font-thicken-strength = 180
+macos-titlebar-style = native
+window-theme = system
+mouse-scroll-multiplier = 0.8
