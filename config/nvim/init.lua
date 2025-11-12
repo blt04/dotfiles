@@ -3,6 +3,8 @@ require("config.lazy")
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
+vim.opt.autoread = true
+
 -- Look and feel
 vim.cmd([[colorscheme moria]])
 vim.opt.mousescroll = 'ver:1,hor:2'
