@@ -57,6 +57,10 @@ let g:ctrlp_custom_ignore = '\v[\/](pkg|bundles|dist|node_modules)$'
 nmap \n :NERDTreeToggle<CR>
 nmap \m :NERDTreeMirror<CR>
 
+" Don't start COC by default. This prevents 'node is missing' errors on
+" servers where we haven't configured coc
+let g:coc_start_at_startup = 0
+
 " use <tab> to trigger completion and navigate to the next complete item
 function! CheckBackspace() abort
   let col = col('.') - 1
