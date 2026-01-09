@@ -47,6 +47,8 @@ return {
           },
         },
       },
+      vtsls = {
+      },
     },
   },
 
@@ -54,8 +56,10 @@ return {
     require("conform").setup({
       formatters_by_ft = {
         go = { "gofumpt", "goimports" },
+        typescript = { "prettier" },
+        typescriptreact = { "prettier" }, -- tsx
       },
-      format_on_save = { timeout_ms = 500 },
+      format_on_save = { timeout_ms = 1200 },
       default_format_opts = {
         async = true,
       },
@@ -75,6 +79,7 @@ return {
               "cssls",
               "html",
               "eslint",
+              "vtsls",
           },
           handlers = {
               function(server_name) -- default handler (optional)
