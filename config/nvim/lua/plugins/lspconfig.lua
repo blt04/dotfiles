@@ -49,6 +49,8 @@ return {
       },
       vtsls = {
       },
+      pyright = {
+      },
     },
   },
 
@@ -80,6 +82,7 @@ return {
               "html",
               "eslint",
               "vtsls",
+              "pyright",
           },
           handlers = {
               function(server_name) -- default handler (optional)
